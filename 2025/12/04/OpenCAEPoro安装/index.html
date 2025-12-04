@@ -33,7 +33,7 @@
 <meta property="og:image" content="http://example.com/2025/12/04/OpenCAEPoro%E5%AE%89%E8%A3%85/CMakeList.png">
 <meta property="og:image" content="http://example.com/2025/12/04/OpenCAEPoro%E5%AE%89%E8%A3%85/mpi-build-petsc.png">
 <meta property="article:published_time" content="2025-12-04T12:17:53.000Z">
-<meta property="article:modified_time" content="2025-12-04T12:52:40.241Z">
+<meta property="article:modified_time" content="2025-12-04T12:54:22.504Z">
 <meta property="article:author" content="Han">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="http://example.com/2025/12/04/OpenCAEPoro%E5%AE%89%E8%A3%85/build-parmetis.png">
@@ -322,6 +322,7 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">export</span> I_MPI_CC=icx  <span class="hljs-comment"># 写进.bashrc</span><br><span class="hljs-built_in">export</span> I_MPI_CXX=icpx<br><span class="hljs-built_in">export</span> I_MPI_FC=ifx<br></code></pre></td></tr></table></figure>
 <p>进入lapack-3.11目录下,修改build-parmetis.sh：</p>
 <img src="/2025/12/04/OpenCAEPoro%E5%AE%89%E8%A3%85/build-parmetis.png" srcset="/img/loading.gif" lazyload class="">
+
 <p>同时修改Makefile，只需把<code>cc=mpicc</code>修改为<code>cc=mpiicx</code>，然后执行脚本即可：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sh build-parmetis.sh<br></code></pre></td></tr></table></figure>
 <h1 id="四、安装Hypre"><a href="#四、安装Hypre" class="headerlink" title="四、安装Hypre"></a>四、安装Hypre</h1><p>进入hypre-2.28.0目录,修改build-hypre.sh：</p>
